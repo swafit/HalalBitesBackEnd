@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: halalbites
+  config:
+    activate:
+      on-profile: docker
+  data:
+    mongodb:
+      host: mongodb
+      port: 27017
+      database: restaurants
+      username: root
+      password: password
+      authentication-database: admin
+      uri: mongodb://localhost/test
+      repositories.enabled: true
+
+logging:
+  level:
+    root: INFO
+    org.wae.halalbites: DEBUG
+
+---
+spring.profiles: docker
+server.port: 8080
+
