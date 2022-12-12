@@ -18,7 +18,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest
-@ExtendWith(SpringExtension.class)
 public class RestaurantServiceImplTest {
     @MockBean
     RestaurantRepository repo;

@@ -1,5 +1,6 @@
 package org.wae.halalbites.presentationlayer;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,9 +15,8 @@ import javax.validation.Valid;
 
 public class RestaurantResources {
 
-    private final RestaurantService SERVICE;
-
-    RestaurantResources(RestaurantService service){this.SERVICE=service;}
+    @Autowired
+    private RestaurantService SERVICE;
 
     @PostMapping("/restaurants")
     @ResponseStatus(HttpStatus.CREATED)

@@ -7,11 +7,8 @@ import reactor.core.publisher.Mono;
 
 public class DataSetupService implements CommandLineRunner {
 
-    private final RestaurantService restaurantService;
+    private RestaurantService restaurantService;
 
-    public DataSetupService(RestaurantService restaurantService) {
-        this.restaurantService = restaurantService;
-    }
     @Override
     public void run(String... args) throws Exception {
         RestaurantDTO r1 = new RestaurantDTO("Halala","Halal","somewhere","123");
