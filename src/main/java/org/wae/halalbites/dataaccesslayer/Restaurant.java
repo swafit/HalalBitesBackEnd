@@ -1,10 +1,9 @@
 package org.wae.halalbites.dataaccesslayer;
 
 import lombok.*;
+import org.springframework.data.annotation.Id;
 
 import java.net.URL;
-
-import org.springframework.data.annotation.Id;
 @Data
 @ToString
 @Builder

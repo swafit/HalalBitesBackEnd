@@ -9,11 +9,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
-@ActiveProfiles("test")
-@SpringBootTest(webEnvironment = RANDOM_PORT)
-@ExtendWith(SpringExtension.class)
-@AutoConfigureWebTestClient
 
+@SpringBootTest
 class RestaurantServiceApplicationTests {
     @Test
     void contextLoads() {

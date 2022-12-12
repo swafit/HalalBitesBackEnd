@@ -5,5 +5,5 @@ import reactor.core.publisher.Flux;
 
 public interface RestaurantRepository extends ReactiveMongoRepository<Restaurant, String> {
 
-    Flux<Restaurant> findAllRestaurants();
+    //Flux<Restaurant> findAllRestaurants();
 }
