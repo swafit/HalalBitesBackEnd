@@ -1,5 +1,6 @@
 package org.wae.halalbites.businesslogiclayer;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.wae.halalbites.dataaccesslayer.RestaurantDTO;
 import org.wae.halalbites.dataaccesslayer.RestaurantRepository;
@@ -11,9 +12,10 @@ import reactor.core.publisher.Mono;
 
 public class RestaurantServiceImpl implements RestaurantService{
 
-    private final RestaurantRepository restaurantRepository;
+    @Autowired
+    RestaurantRepository restaurantRepository;
 
-    public RestaurantServiceImpl(RestaurantRepository restaurantRepository) {this.restaurantRepository=restaurantRepository;}
+    //public RestaurantServiceImpl(RestaurantRepository restaurantRepository) {this.restaurantRepository=restaurantRepository;}
     @Override
     public Flux<RestaurantDTO> GetAllRestaurants() {
         return restaurantRepository.findAll().map(EntityDTOUtil::toDto);

@@ -1,3 +1,25 @@
+server:
+  port: 1453
+
+logging:
+  level:
+    root: INFO
+    org.wae: DEBUG
+
+spring:
+  config:
+    activate:
+      on-profile: default
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: restaurants
+      username: root
+      password: password
+      authentication-database: admin
+---
 spring:
   application:
     name: halalbites
